@@ -1,0 +1,19 @@
+# Boot
+sys-boot/grub:2
+
+# Kernel
+sys-kernel/gentoo-kernel-bin
+
+# Git
+dev-vcs/git
+
+# Cron
+sys-process/cronie
+
+# Security
+app-admin/sudo
+
+# Misc
+net-analyzer/nagios-plugins
+
+# vim: set filetype=conf:

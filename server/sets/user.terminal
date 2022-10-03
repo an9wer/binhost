@@ -1,0 +1,13 @@
+# Screen
+app-misc/screen
+
+# Bash
+app-shells/bash-completion
+
+# Editor
+app-editors/vim
+
+# Browser
+www-client/links
+
+# vim: set filetype=conf:
