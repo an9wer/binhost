@@ -1,6 +1,5 @@
 PREFIX = /
 
-.PHONY: install
 install: var etc
 
 var: world_sets
@@ -8,3 +7,5 @@ var: world_sets
 
 etc: make.conf repos.conf sets package.accept_keywords
 	cp -r $^ $(PREFIX)/etc/portage
+
+.PHONY: install
