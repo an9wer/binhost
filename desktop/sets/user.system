@@ -1,0 +1,42 @@
+# Boot
+sys-boot/efibootmgr
+
+# Compiler
+sys-devel/distcc
+
+# Kernel
+sys-kernel/genkernel
+sys-kernel/gentoo-sources
+
+# File system
+sys-fs/lvm2
+
+# Git
+dev-vcs/git
+
+# Cron
+sys-process/cronie
+
+# Container
+app-containers/docker
+
+# Security
+app-admin/sudo
+app-crypt/gnupg
+
+# Power manager
+sys-power/acpid
+sys-power/cpupower
+sys-power/powertop
+
+# System checker
+sys-apps/dmidecode
+
+# System monitor
+sys-process/nmon
+
+# Misc
+sys-libs/gpm
+sys-apps/flatpak
+
+# vim: set filetype=conf:

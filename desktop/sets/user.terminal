@@ -1,0 +1,21 @@
+# File manager
+app-misc/vifm
+
+# Screen
+app-misc/tmux
+app-misc/screen
+
+# Bash
+app-shells/bash-completion
+
+# Editor
+app-editors/vim
+
+# Browser
+www-client/links
+#www-client/lynx
+
+# Misc
+dev-util/ctags
+
+# vim: set filetype=conf:

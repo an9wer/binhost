@@ -1,0 +1,4 @@
+dev-qt/qtgui ibus dbus
+app-i18n/rime-data extra
+
+x11-misc/redshift geoclue

@@ -1,0 +1,28 @@
+# Network
+net-misc/netifrc
+
+# Wireless
+net-wireless/iwd
+
+# DNS
+net-misc/dhcpcd
+net-dns/ldns-utils
+
+# NTP
+net-misc/chrony
+
+# VPN
+net-vpn/wireguard-tools
+net-proxy/v2ray-bin::an9wer
+
+# Firewall
+net-firewall/fwknop
+
+# Downloader
+net-misc/youtube-dl
+
+# Misc
+net-misc/ipcalc
+net-analyzer/openbsd-netcat
+
+# vim: set filetype=conf:

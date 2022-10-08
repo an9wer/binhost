@@ -1,0 +1,11 @@
+# Image
+media-gfx/sxiv
+
+# Video
+media-video/mpv
+media-video/ffmpeg
+
+# Audio
+media-sound/alsa-utils
+
+# vim: set filetype=conf:

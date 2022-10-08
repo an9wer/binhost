@@ -1,0 +1,48 @@
+# Input method
+app-i18n/ibus
+app-i18n/ibus-rime
+app-i18n/rime-data
+
+# Web browser
+www-client/qutebrowser
+#www-client/firefox
+
+# Notifier
+x11-misc/dunst
+
+# Screenshoter
+media-gfx/flameshot
+
+# Screen manager
+x11-misc/redshift
+
+# Meeting
+net-im/zoom
+
+# IM
+net-im/telegram-desktop
+
+# Office
+app-office/libreoffice
+
+# Font
+media-fonts/fontawesome
+media-fonts/noto-cjk
+media-fonts/noto-emoji
+media-fonts/ubuntu-font-family
+
+# Xorg
+x11-apps/setxkbmap
+x11-apps/xinput
+x11-apps/xmodmap
+x11-apps/xrandr
+x11-base/xorg-server
+
+#x11-misc/dmenu::an9wer
+#x11-misc/redshift
+#x11-misc/slstatus::an9wer
+#x11-misc/tabbed::an9wer
+#x11-terms/st::an9wer
+#x11-wm/dwm::an9wer
+
+# vim: set filetype=conf:

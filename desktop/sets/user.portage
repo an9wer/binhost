@@ -1,0 +1,6 @@
+app-portage/gentoolkit
+
+# Eselect
+app-eselect/eselect-repository
+
+# vim: set filetype=conf:
