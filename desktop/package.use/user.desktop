@@ -1,4 +1,15 @@
+# Input method
 dev-qt/qtgui ibus dbus
 app-i18n/rime-data extra
 
+# Color temperature
 x11-misc/redshift geoclue
+
+# Suckless
+x11-wm/dwm savedconfig xinerama
+x11-terms/st savedconfig
+x11-misc/dmenu savedconfig xinerama app blog pass
+x11-misc/slstatus savedconfig
+x11-misc/tabbed savedconfig
+
+# vim: set filetype=gentoo-package-use:
