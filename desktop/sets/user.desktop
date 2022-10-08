@@ -13,17 +13,17 @@ x11-misc/dunst
 # Screenshoter
 media-gfx/flameshot
 
-# Screen manager
+# Color temperature
 x11-misc/redshift
 
-# Meeting
-net-im/zoom
-
-# IM
+# Chat
 net-im/telegram-desktop
 
 # Office
 app-office/libreoffice
+
+# Meeting
+net-im/zoom
 
 # Font
 media-fonts/fontawesome
@@ -38,11 +38,11 @@ x11-apps/xmodmap
 x11-apps/xrandr
 x11-base/xorg-server
 
-#x11-misc/dmenu::an9wer
-#x11-misc/redshift
-#x11-misc/slstatus::an9wer
-#x11-misc/tabbed::an9wer
-#x11-terms/st::an9wer
-#x11-wm/dwm::an9wer
+# Suckless
+x11-misc/dmenu::an9wer
+x11-misc/slstatus::an9wer
+x11-misc/tabbed::an9wer
+x11-terms/st::an9wer
+x11-wm/dwm::an9wer
 
 # vim: set filetype=conf:
