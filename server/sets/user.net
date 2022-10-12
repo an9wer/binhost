@@ -16,6 +16,7 @@ net-proxy/v2ray-bin::an9wer
 net-firewall/fwknop
 
 # Misc
+net-analyzer/nload
 net-analyzer/openbsd-netcat
 
 # vim: set filetype=conf:
