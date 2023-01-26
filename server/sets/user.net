@@ -10,7 +10,7 @@ net-misc/chrony
 
 # VPN
 net-vpn/wireguard-tools
-net-proxy/yarwv::an9wer
+net-proxy/yarwv-bin::an9wer
 
 # Firewall
 net-firewall/fwknop
