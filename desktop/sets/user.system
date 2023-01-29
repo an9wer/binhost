@@ -2,6 +2,7 @@
 sys-boot/efibootmgr
 
 # Compiler
+sys-devel/gcc
 sys-devel/distcc
 
 # Kernel
