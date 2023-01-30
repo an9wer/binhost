@@ -20,6 +20,7 @@ net-firewall/fwknop
 
 # Misc
 net-analyzer/nload
+net-analyzer/vnstat
 net-analyzer/openbsd-netcat
 
 # vim: set filetype=conf:
