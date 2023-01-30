@@ -8,6 +8,9 @@ net-dns/ldns-utils
 # NTP
 net-misc/chrony
 
+# SSH
+net-misc/autossh
+
 # VPN
 net-vpn/wireguard-tools
 net-proxy/yarwv-bin::an9wer
