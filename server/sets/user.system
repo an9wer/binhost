@@ -4,6 +4,9 @@ sys-boot/grub:2
 # Kernel
 sys-kernel/gentoo-kernel-bin
 
+# File System
+sys-fs/cryptsetup
+
 # Git
 dev-vcs/git
 
