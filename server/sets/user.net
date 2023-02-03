@@ -15,6 +15,9 @@ net-misc/autossh
 net-vpn/wireguard-tools
 net-proxy/yarwv-bin::an9wer
 
+# Rsync
+net-misc/rsync
+
 # Firewall
 net-firewall/fwknop
 
