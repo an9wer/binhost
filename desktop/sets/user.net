@@ -22,7 +22,7 @@ net-proxy/v2ray-bin::an9wer
 net-firewall/fwknop
 
 # Downloader
-net-misc/youtube-dl
+net-misc/yt-dlp
 
 # Misc
 net-misc/ipcalc
