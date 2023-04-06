@@ -4,8 +4,7 @@ app-i18n/ibus-rime
 app-i18n/rime-data
 
 # Web browser
-www-client/qutebrowser
-#www-client/firefox
+www-client/firefox
 
 # Notifier
 x11-misc/dunst
