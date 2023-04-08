@@ -1,3 +1,6 @@
+# Web browser
+www-client/firefox geckodriver
+
 # Input method
 dev-qt/qtgui ibus dbus
 app-i18n/rime-data extra
