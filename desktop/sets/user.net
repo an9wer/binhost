@@ -22,6 +22,7 @@ net-proxy/v2ray-bin::an9wer
 net-firewall/fwknop
 
 # Downloader
+net-misc/aria2
 net-misc/yt-dlp
 
 # Misc

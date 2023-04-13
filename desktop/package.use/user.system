@@ -1,1 +1,7 @@
+# Compiler
 sys-devel/gcc graphite
+
+# File system
+sys-fs/lvm2 lvm
+
+# vim: set filetype=gentoo-package-use:

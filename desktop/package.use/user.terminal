@@ -1,1 +1,3 @@
 app-crypt/pinentry qt5
+
+# vim: set filetype=gentoo-package-use:
