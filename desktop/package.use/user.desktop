@@ -8,6 +8,9 @@ app-i18n/rime-data extra
 # Color temperature
 x11-misc/redshift geoclue
 
+# Office
+app-text/hunspell l10n_en  # enable spelling check in libreoffice
+
 # Suckless
 x11-wm/dwm savedconfig xinerama
 x11-terms/st savedconfig
