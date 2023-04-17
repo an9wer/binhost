@@ -58,3 +58,8 @@
 # required by app-admin/pass-1.7.4-r2::gentoo
 # required by @user.app (argument)
 >=media-gfx/qrencode-4.1.1 png
+# required by net-im/telegram-desktop-4.6.5::gentoo
+# required by @user.desktop
+# required by @selected
+# required by @world (argument)
+>=media-video/ffmpeg-4.4.3 vpx
