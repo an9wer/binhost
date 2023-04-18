@@ -11,6 +11,7 @@ sys-kernel/gentoo-sources
 
 # File system
 sys-fs/lvm2
+sys-fs/cryptsetup
 
 # Git
 dev-vcs/git
