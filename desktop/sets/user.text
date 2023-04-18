@@ -2,9 +2,6 @@
 app-text/zathura
 app-text/zathura-meta
 
-# Ebook
-app-text/calibre
-
 # Parser
 app-misc/jq
 
