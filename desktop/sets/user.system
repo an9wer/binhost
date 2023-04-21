@@ -19,9 +19,6 @@ dev-vcs/git
 # Cron
 sys-process/cronie
 
-# Container
-app-containers/docker
-
 # Security
 app-admin/sudo
 app-crypt/gnupg
