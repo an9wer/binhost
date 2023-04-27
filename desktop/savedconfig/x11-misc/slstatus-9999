@@ -80,7 +80,7 @@ static const struct arg args[] = {
     { separator,         "| ",           NULL },
     { run_command,       " %2s ",       "amixer get Master  | awk -F'[][]' 'END{ print $4 \" \" $2 }'" },
     { separator,         "| ",           NULL },
-    { run_command,       "%2s ",        "amixer get Capture | awk -F'[][]' 'END{ print $4 \" \" $2 }'" },
+    { run_command,       " %2s ",       "amixer get Capture | awk -F'[][]' 'END{ print $4 \" \" $2 }'" },
     { separator,         "| ",           NULL },
     { battery_perc,      " %2s%% ",     "BAT0" },
     { battery_remaining, "%6s ",         "BAT0" },
