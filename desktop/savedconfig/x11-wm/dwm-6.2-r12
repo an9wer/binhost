@@ -33,7 +33,7 @@ static const Rule rules[] = {
 	 */
 	/* class             instance       title       tags mask     isfloating   monitor */
 	{ "firefox-esr",     NULL,          NULL,       1,            0,           -1 },
-	{ "st-256color",     "tmux",        NULL,       1 << 8,       0,           -1 },
+	{ "st-256color",     "tmux",        NULL,       1 << 1,       0,           -1 },
 	{ NULL,              "libreoffice", NULL,       1 << 2,       0,           -1 },
 	{ "Joplin",          NULL,          NULL,       1 << 6,       0,           -1 },
 	{ "TelegramDesktop", NULL,          NULL,       1 << 7,       0,           -1 },
