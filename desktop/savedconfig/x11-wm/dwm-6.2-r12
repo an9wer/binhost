@@ -33,6 +33,7 @@ static const Rule rules[] = {
 	 */
 	/* class             instance       title       tags mask     isfloating   monitor */
 	{ "firefox-esr",     NULL,          NULL,       1,            0,           -1 },
+	{ "st-256color",     "tmux",        NULL,       1 << 8,       0,           -1 },
 	{ NULL,              "libreoffice", NULL,       1 << 2,       0,           -1 },
 	{ "Joplin",          NULL,          NULL,       1 << 6,       0,           -1 },
 	{ "TelegramDesktop", NULL,          NULL,       1 << 7,       0,           -1 },
@@ -68,7 +69,7 @@ static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() 
 static const char *dmenucmd[] = { "dmenu_app_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_magenta, "-sf", col_gray4, NULL };
 static const char *dmenupasscmd[] = { "dmenu_pass_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_magenta, "-sf", col_gray4, NULL };
 static const char *dmenublogcmd[] = { "dmenu_blog_run", "-m", dmenucmd, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_magenta, "-sf", col_gray4, NULL };
-static const char *termcmd[] = { "tabbed", "-c", "-r", "2", "st", "-w", "''", "-e", "tmux", NULL };
+static const char *termcmd[] = { "st", "-n", "tmux", "tmux", NULL };
 static const char *dictcmd[] = { "camdict", "-P", NULL };
 static const char *audioraisecmd[] = { "amixer", "set", "Master", "2%+", NULL };
 static const char *audiolowercmd[] = { "amixer", "set", "Master", "2%-", NULL };
