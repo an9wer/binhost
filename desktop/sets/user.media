@@ -1,6 +1,7 @@
 # Image
 media-gfx/sxiv
 media-gfx/darktable
+media-gfx/imagemagick
 
 # Video
 media-video/mpv
