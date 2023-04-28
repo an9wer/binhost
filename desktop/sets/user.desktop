@@ -25,9 +25,10 @@ app-office/libreoffice
 net-im/zoom
 
 # Font
-media-fonts/fontawesome
+media-fonts/noto
 media-fonts/noto-cjk
 media-fonts/noto-emoji
+media-fonts/fontawesome
 media-fonts/ubuntu-font-family
 
 # Xorg
