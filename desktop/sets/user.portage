@@ -3,4 +3,7 @@ app-portage/gentoolkit
 # Eselect
 app-eselect/eselect-repository
 
+# Eclean
+app-admin/eclean-kernel
+
 # vim: set filetype=conf:

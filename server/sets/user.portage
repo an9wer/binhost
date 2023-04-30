@@ -1,3 +1,6 @@
 app-portage/gentoolkit
 
+# Eclean
+app-admin/eclean-kernel
+
 # vim: set filetype=conf:
