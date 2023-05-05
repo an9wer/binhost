@@ -27,7 +27,6 @@ app-crypt/gnupg
 # Power manager
 sys-power/acpid
 sys-power/cpupower
-sys-power/powertop
 
 # System checker
 sys-apps/dmidecode
