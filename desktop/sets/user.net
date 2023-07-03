@@ -6,7 +6,7 @@ net-wireless/iwd
 
 # DNS
 net-misc/dhcpcd
-net-dns/ldns-utils
+net-dns/bind-tools
 
 # NTP
 net-misc/chrony
