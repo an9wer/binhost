@@ -1,9 +1,11 @@
+# tool kits
+app-portage/eix
 app-portage/gentoolkit
 
-# Eselect
+# eselect
 app-eselect/eselect-repository
 
-# Eclean
+# eclean
 app-admin/eclean-kernel
 
 # vim: set filetype=conf:
