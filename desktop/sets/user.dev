@@ -1,5 +1,6 @@
 # Programming language
 dev-lang/go
+dev-lang/lua
 
 # Container
 app-containers/docker
