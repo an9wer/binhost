@@ -1,6 +1,7 @@
 # tool kits
 app-portage/eix
 app-portage/gentoolkit
+app-portage/emerge-delta-webrsync
 
 # eselect
 app-eselect/eselect-repository
