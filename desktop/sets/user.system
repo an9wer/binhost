@@ -13,6 +13,7 @@ sys-kernel/gentoo-sources
 sys-fs/lvm2
 sys-fs/cryptsetup
 sys-fs/udisks
+net-fs/nfs-utils
 
 # Git
 dev-vcs/git
