@@ -4,5 +4,6 @@ dev-lang/lua
 
 # Container
 app-containers/docker
+app-containers/docker-cli
 
 # vim: set filetype=conf:
