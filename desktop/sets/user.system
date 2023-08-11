@@ -35,6 +35,9 @@ sys-apps/dmidecode
 # System monitor
 sys-process/nmon
 
+# Documentation
+sys-apps/texinfo
+
 # Misc
 sys-libs/gpm
 sys-apps/flatpak
