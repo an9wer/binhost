@@ -8,14 +8,11 @@ app-misc/screen
 # Bash
 app-shells/bash-completion
 
-# Editor
-app-editors/vim
-
 # Browser
 www-client/links
-#www-client/lynx
 
 # Misc
+app-misc/jq
 dev-util/ctags
 
 # vim: set filetype=conf:

@@ -1,8 +1,10 @@
 # PDF
 app-text/zathura
 app-text/zathura-meta
+app-text/pdftk
 
-# Parser
-app-misc/jq
+# Editor
+app-editors/vim
+app-editors/emacs
 
 # vim: set filetype=conf:
