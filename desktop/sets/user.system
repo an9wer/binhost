@@ -15,7 +15,7 @@ sys-fs/cryptsetup
 sys-fs/udisks
 net-fs/nfs-utils
 
-# Git
+# Version control system
 dev-vcs/git
 
 # Cron

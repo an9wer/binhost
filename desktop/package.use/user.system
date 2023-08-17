@@ -4,4 +4,7 @@ sys-devel/gcc graphite
 # File system
 sys-fs/lvm2 lvm
 
+# Version control system
+dev-vcs/git subvresion
+
 # vim: set filetype=gentoo-package-use:
