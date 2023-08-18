@@ -2,7 +2,7 @@
 www-client/firefox geckodriver
 
 # Input method
-dev-qt/qtgui ibus dbus
+dev-qt/qtgui ibus  # https://wiki.gentoo.org/wiki/IBus
 app-i18n/rime-data extra
 
 # Color temperature
