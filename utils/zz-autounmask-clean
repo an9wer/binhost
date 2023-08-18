@@ -1,0 +1,63 @@
+#!/usr/bin/python
+
+from gentoolkit.helpers import get_installed_cpvs
+
+import portage
+import os
+
+
+abs_user_config = os.path.join(portage.settings["PORTAGE_CONFIGROOT"], portage.USER_CONFIG_PATH)
+abs_auto_unmask = os.path.join(abs_user_config, "package.use", "zz-autounmask")
+
+ist_cps = [portage.pkgsplit(cpv)[0] for cpv in get_installed_cpvs()]
+
+dep_chain, pkg_dep_chain = [], {}
+with open(abs_auto_unmask, 'r+') as f:
+    for l in f.readlines():
+        l = l.strip()
+        if l.startswith("# required by "):
+            pkg = l.removeprefix("# required by ").split(":")[0]
+            if portage.pkgsplit(pkg) and portage.pkgsplit(pkg)[0] in ist_cps:
+                dep_chain.append(l)
+        elif l.startswith(">=") or l.startswith("="):
+            atom, use = l.split(" ", 1)
+            cpv = portage.dep_getcpv(atom)
+            cp, ver, rev = portage.pkgsplit(cpv)
+
+            if cp not in ist_cps:
+                dep_chain.clear()
+                continue
+
+            is_redundant = False
+            for l_pkg in list(pkg_dep_chain):
+                atom2, use2 = l_pkg.split(" ", 1)
+                cpv2 = portage.dep_getcpv(atom2)
+                cp2, ver2, rev2 = portage.pkgsplit(cpv2)
+                if cp == cp2:
+                    if use != use2:
+                        # TODO: how to deal with two sections with the same package
+                        # but containing different USE flags?
+                        pass
+                    else:
+                        cmp = portage.vercmp(f"{ver}-{rev}", f"{ver2}-{rev2}")
+                        if cmp > 0:
+                            pkg_dep_chain.pop(l_pkg)
+                        elif cmp <= 0:
+                            is_redundant = True
+                        else:
+                            print(f"Invalid version number: {atom}, {atom2}")
+                            exit(1)
+            if not is_redundant and dep_chain:
+                pkg_dep_chain[f"={cpv} {use}"] = dep_chain
+            dep_chain = []
+        else:
+            print(f"Invalid line: {l}")
+            exit(1)
+
+    l = []
+    for l_pkg, dep_chain in pkg_dep_chain.items():
+        l += dep_chain + [l_pkg]
+
+    f.seek(0)
+    f.truncate()
+    f.write("\n".join(l))
