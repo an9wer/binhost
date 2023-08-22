@@ -5,8 +5,8 @@
 =sys-libs/zlib-1.2.13-r1 minizip
 # required by app-text/zathura-pdf-poppler-0.3.1::gentoo (manual)
 =app-text/poppler-23.05.0 qt5 cairo
-# required by app-office/libreoffice-7.5.3.2::gentoo (manual)
-=media-libs/harfbuzz-7.3.0 icu
+# required by app-text/zathura-pdf-poppler-0.3.1-r1-1:0/0::gentoo (manual)
+=app-text/poppler-23.08.0 cairo
 # required by app-admin/pass-1.7.4-r2::gentoo
 =media-gfx/qrencode-4.1.1 png
 # required by sys-fs/udisks-2.9.4-r3::gentoo (manual)
@@ -31,3 +31,6 @@
 # required by kde-frameworks/kcoreaddons-5.108.0-r1::gentoo
 # required by net-im/telegram-desktop-4.8.1-r3::gentoo
 =dev-qt/qtcore-5.15.10-r1 icu
+# required by app-office/libreoffice-7.5.5.2-1:0/0::gentoo (manual)
+=media-libs/harfbuzz-8.0.1 icu
+
