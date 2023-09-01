@@ -17,6 +17,7 @@ net-fs/nfs-utils
 
 # Version control system
 dev-vcs/git
+dev-vcs/subversion
 
 # Cron
 sys-process/cronie
