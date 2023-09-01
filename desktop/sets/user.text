@@ -1,7 +1,6 @@
 # PDF
 app-text/zathura
 app-text/zathura-meta
-app-text/pdftk
 
 # Editor
 app-editors/vim
