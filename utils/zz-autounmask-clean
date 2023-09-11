@@ -6,58 +6,66 @@ import portage
 import os
 
 
+ist_cps = [portage.pkgsplit(cpv)[0] for cpv in get_installed_cpvs()]
+ist_cpvs = [cpv for cpv in get_installed_cpvs()]
+
+
+class Unmask:
+    def __init__(self):
+        self.cpv = ""
+        self.use = ""
+        self.deps = []
+        self.is_ist = False
+
+    def parse_pkg_line(self, line):
+        """
+        :param line: a string like
+            '>=media-libs/libvpx-1.12.0-r1 postproc'
+            '=media-video/ffmpeg-4.4.4-r3 opus vpx'
+        """
+        atom, use = line.split(" ", 1)
+        cpv = portage.dep_getcpv(atom)
+        # ignore the version of a package that is not installed
+        if cpv in ist_cpvs:
+            self.is_ist = True
+            self.cpv = cpv
+            self.use = use
+
+    def parse_dep_line(self, line):
+        """
+        :param line: a string like
+            '# required by media-video/ffmpeg-4.4.3::gentoo'
+            '# required by @world'
+        """
+        dep = line.removeprefix("# required by ").split("::")[0]
+        # ignore the dependencies such as @world, @selected, and etc.
+        if not dep.startswith("@"):
+            pkg = portage.pkgsplit(dep)[0]
+            if pkg in ist_cps:
+                self.deps.append(line)
+
+
 abs_user_config = os.path.join(portage.settings["PORTAGE_CONFIGROOT"], portage.USER_CONFIG_PATH)
 abs_auto_unmask = os.path.join(abs_user_config, "package.use", "zz-autounmask")
 
-ist_cps = [portage.pkgsplit(cpv)[0] for cpv in get_installed_cpvs()]
-
-dep_chain, pkg_dep_chain = [], {}
+unmask, unmasks = None, []
 with open(abs_auto_unmask, 'r+') as f:
-    for l in f.readlines():
-        l = l.strip()
+    for l in f.read().splitlines():
+        if unmask is None:
+            unmask = Unmask()
+
         if l.startswith("# required by "):
-            pkg = l.removeprefix("# required by ").split(":")[0]
-            if portage.pkgsplit(pkg) and portage.pkgsplit(pkg)[0] in ist_cps:
-                dep_chain.append(l)
+            unmask.parse_dep_line(l)
         elif l.startswith(">=") or l.startswith("="):
-            atom, use = l.split(" ", 1)
-            cpv = portage.dep_getcpv(atom)
-            cp, ver, rev = portage.pkgsplit(cpv)
+            unmask.parse_pkg_line(l)
+            if unmask.is_ist:
+                unmasks.append(unmask)
+            unmask = None
 
-            if cp not in ist_cps:
-                dep_chain.clear()
-                continue
-
-            is_redundant = False
-            for l_pkg in list(pkg_dep_chain):
-                atom2, use2 = l_pkg.split(" ", 1)
-                cpv2 = portage.dep_getcpv(atom2)
-                cp2, ver2, rev2 = portage.pkgsplit(cpv2)
-                if cp == cp2:
-                    if use != use2:
-                        # TODO: how to deal with two sections with the same package
-                        # but containing different USE flags?
-                        pass
-                    else:
-                        cmp = portage.vercmp(f"{ver}-{rev}", f"{ver2}-{rev2}")
-                        if cmp > 0:
-                            pkg_dep_chain.pop(l_pkg)
-                        elif cmp <= 0:
-                            is_redundant = True
-                        else:
-                            print(f"Invalid version number: {atom}, {atom2}")
-                            exit(1)
-            if not is_redundant and dep_chain:
-                pkg_dep_chain[f"={cpv} {use}"] = dep_chain
-            dep_chain = []
-        else:
-            print(f"Invalid line: {l}")
-            exit(1)
-
-    l = []
-    for l_pkg, dep_chain in pkg_dep_chain.items():
-        l += dep_chain + [l_pkg]
-
+    # save packages and their dependencies
     f.seek(0)
     f.truncate()
-    f.write("\n".join(l))
+    for unmask in unmasks:
+        for dep in unmask.deps:
+            f.write("%s\n" % dep)
+        f.write("=%s %s\n" % (unmask.cpv, unmask.use))
