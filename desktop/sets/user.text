@@ -4,7 +4,6 @@ app-text/zathura-meta
 
 # Editor
 app-editors/vim
-app-editors/emacs
 app-editors/nano
 
 # vim: set filetype=conf:
