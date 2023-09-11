@@ -2,6 +2,9 @@
 dev-lang/go
 dev-lang/lua
 
+# Tag system
+dev-util/ctags
+
 # Container
 app-containers/docker
 app-containers/docker-cli
