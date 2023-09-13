@@ -9,4 +9,7 @@ dev-util/ctags
 app-containers/docker
 app-containers/docker-cli
 
+# Virtual machine
+app-emulation/qemu
+
 # vim: set filetype=conf:
