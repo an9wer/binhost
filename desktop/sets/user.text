@@ -1,6 +1,7 @@
 # PDF
 app-text/zathura
 app-text/zathura-meta
+app-text/zathura-pdf-mupdf
 
 # Editor
 app-editors/vim
