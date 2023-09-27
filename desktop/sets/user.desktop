@@ -38,6 +38,7 @@ x11-apps/xmodmap
 x11-apps/setxkbmap
 x11-base/xorg-server
 x11-misc/picom
+x11-misc/unclutter-xfixes
 
 # Suckless
 x11-misc/dmenu::an9wer
