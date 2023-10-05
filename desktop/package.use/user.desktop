@@ -1,5 +1,5 @@
 # Web browser
-www-client/firefox geckodriver
+www-client/firefox geckodriver hwaccel wayland
 
 # Input method
 dev-qt/qtgui ibus dbus  # https://wiki.gentoo.org/wiki/IBus
