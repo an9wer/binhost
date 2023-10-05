@@ -1,4 +1,4 @@
 # Image
-media-gfx/imagemagick jpeg
+media-gfx/imagemagick jpeg webp
 
 # vim: set filetype=gentoo-package-use:
