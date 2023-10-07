@@ -9,6 +9,9 @@ sys-devel/distcc
 sys-kernel/genkernel
 sys-kernel/gentoo-sources
 
+# Man pages
+sys-apps/man-pages-posix
+
 # File system
 sys-fs/lvm2
 sys-fs/cryptsetup
