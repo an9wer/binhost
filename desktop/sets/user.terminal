@@ -1,12 +1,13 @@
+# Shell
+app-shells/loksh
+app-shells/bash-completion
+
 # File manager
 app-misc/vifm
 
 # Screen
 app-misc/tmux
 app-misc/screen
-
-# Bash
-app-shells/bash-completion
 
 # Browser
 www-client/links
