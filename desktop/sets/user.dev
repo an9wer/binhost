@@ -1,6 +1,10 @@
 # Programming language
 dev-lang/go
 dev-lang/lua
+dev-lang/tcl
+
+# Libs
+dev-tcltk/tcllib
 
 # Tag system
 dev-util/ctags
