@@ -2,7 +2,7 @@ Binhost
 =======
 
 This repos is used to maintain a Gentoo binhost (binary package host), including
-all the necessary files for the package manager of Gentoo - `portage`_.
+all necessary files for Gentoo's package manager - `portage`_.
 
 Motivation
 ----------
