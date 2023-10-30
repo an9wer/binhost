@@ -13,6 +13,7 @@ sys-kernel/gentoo-sources
 sys-apps/man-pages-posix
 
 # File system
+sys-fs/dosfstools
 sys-fs/lvm2
 sys-fs/cryptsetup
 sys-fs/udisks
