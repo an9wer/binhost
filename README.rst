@@ -1,19 +1,17 @@
 Binhost
 =======
 
-This repos is used for self-maintained Gentoo binhost, in order to "build once
-and install anywhere".
+This repos is used for maintaining a binhost (a.k.a. binary package host)
 
 Motivation
 ----------
 
-I have Gentoo installed on my laptop, every time when I update the system,
-there is a significant workload on the hardware components. I also maintain
-several servers, with Gentoo installed. It is quite a problem that the system
-update consumes hardware resources a lot, especially when there are other
-services running at the same time.
-
-Thus, I built up a binhost server, working as a binary-package builder for all
-my Gentoo machines. System update of Gentoo is no longer painful, as I can
-update it much like other binary distributions (e.g. Debian, Fedora, Arch) and
-enjoy all the benefits of Gentoo.
+Gentoo is my daily driver. When it comes to system updates, packages have to be
+built from source, which demands a lot of hardware resources: the CPU works on a
+high load to compile source codes, the SSD is busy on reading and writing
+temporary files during the compilation, the memory is filled with caches for
+those temporary files. As a result, while the system update is in progress, I
+have limited hardware resources available for other tasks. Thus, I decided to
+employ a binhost to compile packages and generate binary files. After that, I
+can update the system much like other Linux distributions, by simply downloading
+binary packages from remote server and unpacking them into my local system.
