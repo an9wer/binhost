@@ -2,7 +2,7 @@ Binhost
 =======
 
 This repos is used to maintain a Gentoo binhost (binary package host), including
-all necessary files of the `portage`_ system.
+all necessary files of `the portage system`_.
 
 Motivation
 ----------
@@ -15,9 +15,12 @@ the temporary files. As a result, while the system update is in progress, I
 have limited hardware resources available for other tasks.
 
 Thus, I decided to employ a binhost to compile packages and generate binary
-files. After that, I can update the system much like other Linux distributions,
-by simply downloading binary packages from remote server and unpacking them into
-my local system.
+files. After that, I can update the system by simply downloading binary packages
+from remote server and unpacking them into my local system. But why not using
+the other Linux distributions that by default offer pre-compiled binary
+packages? Because I heavily rely on `USE flags`_ provided by Gentoo's portage
+system to control what features a certain package should support.
 
 
-.. _portage: https://wiki.gentoo.org/wiki/Portage
+.. _the portage system: https://wiki.gentoo.org/wiki/Portage
+.. _USE flags: https://wiki.gentoo.org/wiki/Handbook:AMD64/Working/USE
