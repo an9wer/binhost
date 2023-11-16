@@ -6,11 +6,10 @@ import portage
 import os
 
 
-ist_cps = [portage.pkgsplit(cpv)[0] for cpv in get_installed_cpvs()]
-ist_cpvs = [cpv for cpv in get_installed_cpvs()]
-
-
 class Unmask:
+    ist_cps = [portage.pkgsplit(cpv)[0] for cpv in get_installed_cpvs()]
+    ist_cpvs = [cpv for cpv in get_installed_cpvs()]
+
     def __init__(self):
         self.cpv = ""
         self.use = ""
@@ -19,21 +18,21 @@ class Unmask:
 
     def parse_pkg_line(self, line):
         """
-        :param line: a string like
+        :param line:
             '>=media-libs/libvpx-1.12.0-r1 postproc'
             '=media-video/ffmpeg-4.4.4-r3 opus vpx'
         """
         atom, use = line.split(" ", 1)
         cpv = portage.dep_getcpv(atom)
         # ignore the version of a package that is not installed
-        if cpv in ist_cpvs:
+        if cpv in self.ist_cpvs:
             self.is_ist = True
             self.cpv = cpv
             self.use = use
 
     def parse_dep_line(self, line):
         """
-        :param line: a string like
+        :param line:
             '# required by media-video/ffmpeg-4.4.3::gentoo'
             '# required by @world'
         """
@@ -41,26 +40,24 @@ class Unmask:
         # ignore the dependencies such as @world, @selected, and etc.
         if not dep.startswith("@"):
             pkg = portage.pkgsplit(dep)[0]
-            if pkg in ist_cps:
+            if pkg in self.ist_cps:
                 self.deps.append(line)
 
 
 abs_user_config = os.path.join(portage.settings["PORTAGE_CONFIGROOT"], portage.USER_CONFIG_PATH)
 abs_auto_unmask = os.path.join(abs_user_config, "package.use", "zz-autounmask")
 
-unmask, unmasks = None, []
+unmask, unmasks = Unmask(), []
 with open(abs_auto_unmask, 'r+') as f:
     for l in f.read().splitlines():
-        if unmask is None:
-            unmask = Unmask()
-
         if l.startswith("# required by "):
             unmask.parse_dep_line(l)
         elif l.startswith(">=") or l.startswith("="):
             unmask.parse_pkg_line(l)
-            if unmask.is_ist:
+            # check if the package is installed and it is dependented by others
+            if unmask.is_ist and unmask.deps:
                 unmasks.append(unmask)
-            unmask = None
+            unmask = Unmask()
 
     # save packages and their dependencies
     f.seek(0)
