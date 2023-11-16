@@ -1,2 +1,2 @@
 # Virtual machine
-app-emulation/qemu gtk QEMU_SOFTMMU_TARGETS: arm aarch64
+app-emulation/qemu static-user gtk QEMU_SOFTMMU_TARGETS: arm aarch64 QEMU_USER_TARGETS: arm aarch64
