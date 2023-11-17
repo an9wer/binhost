@@ -16,4 +16,7 @@ app-containers/docker-cli
 # Virtual machine
 app-emulation/qemu
 
+# Compiler
+sys-devel/crossdev
+
 # vim: set filetype=conf:
