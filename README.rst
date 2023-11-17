@@ -23,11 +23,13 @@ create a tarball of them, such that I can download the tarball file and
 unpacking it into the system, which is similar to other Linux distributions
 that offer pre-compiled binary packages.
 
-File Sturcture
---------------
+Usage
+-----
 
-amd64: includes portage configuration files for AMD64 systems.
-utils: includes utilties for maintaining the binhost.
+Directories:
+
+- amd64: includes portage configuration files for AMD64 systems.
+- utils: includes utilties for maintaining the binhost.
 
 .. _the portage system: https://wiki.gentoo.org/wiki/Portage
 .. _USE flags: https://wiki.gentoo.org/wiki/Handbook:AMD64/Working/USE
