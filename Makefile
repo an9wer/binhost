@@ -1,15 +1,14 @@
-PREFIX	= /
-PORTAGE	= portage
-
-export PREFIX
+ARCH   = amd64 armv7a
 
 help:
-	@echo TODO
+	@echo "***Please set the variable 'CHROOT' if you are using a chroot environment***"
+	@echo ""
+	@echo "Usage:"
+	@echo "  make utils  - install utilties for maintaining the binhost"
+	@echo "  make amd64  - install portage configuration files for an amd64 system"
+	@echo "  make armv7a - install portage configuration files for an armv7a system"
 
-utils: utils/zz-autounmask-clean
-	cp -r $^ $(PREFIX)/usr/local/bin
+${ARCH} utils:
+	${MAKE} -C $@
 
-$(PORTAGE): utils
-	$(MAKE) -C $@
-
-.PHONY: help utils $(PORTAGE)
+.PHONY: help utils ${ARCH}

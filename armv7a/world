@@ -1,0 +1,8 @@
+sys-firmware/raspberrypi-wifi-ucode
+sys-fs/cryptsetup
+sys-fs/lvm2
+sys-fs/udisks
+net-fs/nfs-utils
+net-wireless/wpa_supplicant
+sys-devel/bmake
+app-admin/doas
