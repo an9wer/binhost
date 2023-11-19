@@ -29,6 +29,7 @@ Usage
 Directories:
 
 - amd64: includes portage configuration files for AMD64 systems.
+- armv7a: includes portage configuration files for ARMv7a systems.
 - utils: includes utilties for maintaining the binhost.
 
 .. _the portage system: https://wiki.gentoo.org/wiki/Portage
