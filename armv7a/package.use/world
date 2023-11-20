@@ -1,1 +1,2 @@
 sys-fs/lvm2 lvm
+net-vpn/wireguard-tools -wg-quick
