@@ -4,5 +4,6 @@ sys-fs/lvm2
 sys-fs/udisks
 net-fs/nfs-utils
 net-wireless/wpa_supplicant
+net-vpn/wireguard-tools
 sys-devel/bmake
 app-admin/doas
