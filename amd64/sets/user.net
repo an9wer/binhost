@@ -2,7 +2,7 @@
 net-misc/netifrc
 
 # Wireless
-net-wireless/iwd
+net-wireless/wpa_supplicant
 
 # DNS
 net-misc/dhcpcd
