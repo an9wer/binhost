@@ -2,39 +2,35 @@
 =media-gfx/qrencode-4.1.1 png
 # required by sys-fs/udisks-2.9.4-r3::gentoo (manual)
 =sys-libs/libblockdev-2.28-r1 lvm
-# required by app-office/libreoffice-7.5.3.2::gentoo
-=dev-libs/xmlsec-1.3.1 nss
-# required by www-client/firefox-115.3.1::gentoo[system-libvpx]
-=media-libs/libvpx-1.13.1 postproc
-# required by x11-libs/gtk+-3.24.38::gentoo[wayland]
-# required by www-client/firefox-115.3.1::gentoo[wayland]
-=media-libs/mesa-23.1.8 wayland
-# required by net-print/cups-filters-1.28.17-r2::gentoo[postscript]
-# required by net-print/cups-2.4.7-r1::gentoo
-# required by app-office/libreoffice-7.5.5.2::gentoo[cups]
-=app-text/ghostscript-gpl-10.02.0 cups
-# required by app-emulation/qemu-8.0.4::gentoo[static-user]
-=dev-libs/glib-2.76.4 static-libs
 # required by app-emulation/qemu-8.0.4::gentoo[static-user,xattr]
 =sys-apps/attr-2.5.1-r2 static-libs
-# required by dev-libs/glib-2.76.4::gentoo
-# required by app-emulation/qemu-8.0.4::gentoo[static-user]
-=dev-libs/libpcre2-10.42-r1 static-libs
-# required by www-client/firefox-115.3.1::gentoo[wayland]
-=x11-libs/gtk+-3.24.38 wayland
-# required by www-client/firefox-115.3.1::gentoo[wayland]
-=x11-libs/libxkbcommon-1.5.0 wayland
-# required by media-libs/mesa-23.1.8::gentoo[-video_cards_r600,video_cards_radeonsi,-video_cards_radeon,-video_cards_r300]
-# required by app-office/libreoffice-7.5.6.2::gentoo[gtk]
-=x11-libs/libdrm-2.4.116 video_cards_radeon
-# required by net-im/telegram-desktop-4.8.1-r3::gentoo
-=sys-libs/zlib-1.3-r1 minizip
-# required by net-im/telegram-desktop-4.8.1-r3::gentoo
-=media-video/ffmpeg-6.0-r9 opus vpx
-# required by net-im/telegram-desktop-4.8.1-r3::gentoo[-qt6]
-=dev-qt/qtgui-5.15.11 jpeg
-# required by kde-frameworks/kcoreaddons-5.110.0::gentoo
-# required by net-im/telegram-desktop-4.8.1-r3::gentoo[-qt6]
-=dev-qt/qtcore-5.15.11-r1 icu
-# required by app-office/libreoffice-7.5.6.2::gentoo
-=media-libs/harfbuzz-8.2.0 icu
+# required by x11-misc/xdg-utils-1.1.3_p20210805-r2::gentoo
+# required by app-office/libreoffice-7.6.4.1::gentoo
+=app-text/xmlto-0.0.28-r11 text
+# required by media-libs/mesa-23.3.5::gentoo[video_cards_radeonsi,-video_cards_r600,-video_cards_radeon,-video_cards_r300]
+# required by virtual/opengl-7.0-r2::gentoo
+# required by www-client/firefox-115.8.0::gentoo[X]
+=x11-libs/libdrm-2.4.120 video_cards_radeon
+# required by www-client/firefox-115.8.0::gentoo[system-libvpx]
+=media-libs/libvpx-1.13.1-r1 postproc
+# required by www-client/firefox-115.8.0::gentoo[wayland]
+=x11-libs/gtk+-3.24.39 wayland
+# required by www-client/firefox-115.8.0::gentoo[wayland]
+=x11-libs/libxkbcommon-1.6.0 wayland
+# required by x11-libs/gtk+-3.24.39::gentoo[wayland]
+# required by app-text/zathura-0.5.2-r4::gentoo
+# required by app-text/zathura-meta-0::gentoo
+=media-libs/mesa-23.3.5 wayland
+# required by app-office/libreoffice-7.6.4.1::gentoo
+=dev-libs/xmlsec-1.3.3-r1 nss
+# required by app-office/libreoffice-7.6.4.1::gentoo
+=media-libs/harfbuzz-8.3.0 icu
+# required by app-emulation/qemu-8.1.5::gentoo[static-user]
+=dev-libs/glib-2.78.3 static-libs
+# required by app-emulation/qemu-8.1.5::gentoo[static-user]
+=sys-libs/zlib-1.3-r4 static-libs
+# required by dev-libs/glib-2.78.3::gentoo
+# required by media-sound/pulseaudio-daemon-17.0-r1::gentoo[glib]
+# required by media-libs/libpulse-17.0::gentoo
+# required by www-client/firefox-115.8.0::gentoo[pulseaudio]
+=dev-libs/libpcre2-10.42-r2 static-libs
