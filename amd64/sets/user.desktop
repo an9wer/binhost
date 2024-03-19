@@ -16,7 +16,7 @@ media-gfx/flameshot
 x11-misc/redshift
 
 # Chat
-net-im/telegram-desktop
+net-im/telegram-desktop-bin
 
 # Office
 app-office/libreoffice
