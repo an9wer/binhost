@@ -24,6 +24,7 @@ net-misc/aria2
 net-misc/yt-dlp
 
 # Misc
+net-misc/rclone
 net-misc/ipcalc
 net-analyzer/openbsd-netcat
 
