@@ -5,6 +5,7 @@ net-misc/netifrc
 net-wireless/wpa_supplicant
 
 # DNS
+net-misc/dhcp
 net-misc/dhcpcd
 net-dns/bind-tools
 
