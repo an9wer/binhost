@@ -28,7 +28,6 @@ net-misc/yt-dlp
 
 # Misc
 net-misc/ipcalc
-net-analyzer/wireshark
 net-analyzer/openbsd-netcat
 
 # vim: set filetype=conf:
