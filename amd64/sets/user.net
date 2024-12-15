@@ -12,9 +12,6 @@ net-dns/bind-tools
 # NTP
 net-misc/chrony
 
-# WebDav
-net-misc/cadaver
-
 # VPN
 net-vpn/wireguard-tools
 net-proxy/v2ray-bin::an9wer
